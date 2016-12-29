@@ -9,7 +9,6 @@ const int WIN_X = 800;
 const int WIN_Y = 600;
 
 int main(int argc, char *argv[]) {
-
     	//skapa variabler för fönster och innehåll
 	SDL_Window* win = NULL;
 	SDL_Surface* surf = NULL;
@@ -19,7 +18,6 @@ int main(int argc, char *argv[]) {
      	printf("SDL misslyckades! SDL_Error: %s\n", SDL_GetError());
         return 1;
 	}
-	
 	else {
 		//skapa fönster
 		win = SDL_CreateWindow ("EVA",
@@ -29,25 +27,20 @@ int main(int argc, char *argv[]) {
                                 WIN_Y,
                                 0);
 	}
-		if (!win) {
-			printf("Fönster misslyckades! SDL_Error: %s\n", SDL_GetError());
-			return 1;
-		}
-	
-		else {
-			//hämta innehåll för fönster
-			surf = SDL_GetWindowSurface(win);
-
-			//rita innehåll
-			SDL_FillRect(surf, NULL, SDL_MapRGB(surf->format, 0xFF, 0xFF, 0xFF));
-
-			//uppdatera innehåll
-			SDL_UpdateWindowSurface(win);
-
-			//vänta antal millisekunder
-			SDL_Delay(5000);
-		}
-
+	if (!win) {
+		printf("Fönster misslyckades! SDL_Error: %s\n", SDL_GetError());
+		return 1;
+	}
+	else {
+		//hämta innehåll för fönster
+		surf = SDL_GetWindowSurface(win);
+		//rita innehåll
+		SDL_FillRect(surf, NULL, SDL_MapRGB(surf->format, 0xFF, 0xFF, 0xFF));
+		//uppdatera innehåll
+		SDL_UpdateWindowSurface(win);
+		//vänta antal millisekunder
+		SDL_Delay(5000);
+	}
 	//rensa resurser
 	SDL_DestroyWindow(win);
 	SDL_Quit();
