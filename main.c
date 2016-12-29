@@ -16,9 +16,10 @@ int main(int argc, char *argv[]) {
 
 	// initiera grafik- och tidsystem
 	if (SDL_Init(SDL_INIT_VIDEO|SDL_INIT_TIMER) != 0) {
-        printf("SDL misslyckades! SDL_Error: %s\n", SDL_GetError());
+     	printf("SDL misslyckades! SDL_Error: %s\n", SDL_GetError());
         return 1;
 	}
+	
 	else {
 		//skapa fönster
 		win = SDL_CreateWindow ("EVA",
@@ -32,6 +33,7 @@ int main(int argc, char *argv[]) {
 			printf("Fönster misslyckades! SDL_Error: %s\n", SDL_GetError());
 			return 1;
 		}
+	
 		else {
 			//hämta innehåll för fönster
 			surf = SDL_GetWindowSurface(win);
@@ -49,6 +51,5 @@ int main(int argc, char *argv[]) {
 	//rensa resurser
 	SDL_DestroyWindow(win);
 	SDL_Quit();
-
 	return 0;
 }
