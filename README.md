@@ -1,4 +1,4 @@
 # EVA
 Game engine as a hobby project
 
-*SDL 2.0 is required
+*Uses SDL 2.0
