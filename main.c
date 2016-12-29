@@ -10,7 +10,7 @@ const int WIN_Y = 600;
 
 int main(int argc, char *argv[]) {
 
-    //skapa variabler för fönster och innehåll
+    	//skapa variabler för fönster och innehåll
 	SDL_Window* win = NULL;
 	SDL_Surface* surf = NULL;
 
