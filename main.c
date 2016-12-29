@@ -12,7 +12,6 @@ int main(int argc, char *argv[]) {
     	//skapa variabler för fönster och innehåll
 	SDL_Window* win = NULL;
 	SDL_Surface* surf = NULL;
-
 	// initiera grafik- och tidsystem
 	if (SDL_Init(SDL_INIT_VIDEO|SDL_INIT_TIMER) != 0) {
      	printf("SDL misslyckades! SDL_Error: %s\n", SDL_GetError());
