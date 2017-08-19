@@ -1,4 +1,5 @@
 # EVA
-Game engine as a hobby project
+My game engine as a hobby project
 
-*Uses SDL 2.0
+Software dependencies:
+*SDL 2.0
