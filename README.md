@@ -1,5 +1,5 @@
 # EVA
-My game engine as a hobby project
+A modern 2D game engine in C.
 
 Software dependencies:
- SDL 2.0
+*SDL 2.0
